@@ -11,10 +11,13 @@ namespace ModelFun2.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            // variable hour is the date and time right now
             int hour = DateTime.Now.Hour;
 
+            // ViewBag.Greeting will store the variable hour and give a greeting depending on the time of day
             ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
 
+            // Returns the view that is associated with HomeController
             return View();
         }
     }
