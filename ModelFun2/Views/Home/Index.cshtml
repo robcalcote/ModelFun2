@@ -6,8 +6,15 @@
 <body>
     <div>
         <br />
+
+
         @ViewBag.Greeting World
         <br />
+
+        <!-- Displays ViewBag.Output as Raw HTML -->
         @Html.Raw((String)ViewBag.Output)
+        <br />
+
+        @Html.ActionLink("RSVP Now", "RsvpForm")
     </div>
 </body>
