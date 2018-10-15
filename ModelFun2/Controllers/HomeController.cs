@@ -16,6 +16,8 @@ namespace ModelFun2.Controllers
 
             // ViewBag.Greeting will store the variable hour and give a greeting depending on the time of day
             ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
+            ViewBag.Output = "<p>Hello</p>";
+
 
             // Returns the view that is associated with HomeController
             return View();
