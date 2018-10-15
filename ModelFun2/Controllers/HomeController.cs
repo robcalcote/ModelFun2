@@ -11,6 +11,10 @@ namespace ModelFun2.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            int hour = DateTime.Now.Hour;
+
+            ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
+
             return View();
         }
     }
