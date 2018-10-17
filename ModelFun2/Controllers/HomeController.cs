@@ -22,5 +22,10 @@ namespace ModelFun2.Controllers
             // Returns the view that is associated with HomeController
             return View();
         }
+
+        public ActionResult RsvpForm()
+        {
+            return View();
+        }
     }
 }
