@@ -8,17 +8,22 @@
 <head>
     <!-- Meta tag provides information to the search engines (Describes the website) -->
     <meta name="viewport" content="width=device-width" />
+    <!-- Title tag displays on the tab for the webpage -->
     <title>RsvpForm</title>
-    <!-- This is linking the CSS files so we can access them in this HTML sheet -->
+    <!-- Link - This is linking the CSS files so we can access them in this HTML sheet -->
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <!-- script tag links to the scripts folder so we can access JavaScript from our HTML page -->
     <script src="~/Scripts/jquery-2.1.4.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </head>
 <body>
+    <!-- Jumbotron is a bootstrap class that is like a main page header -->
     <div class="jumbotron">
         <div class="container">
+            <!-- Html.BeginForm() function generates all the HTML we need for a HTML form (everything inside {   }) -->
             @using (Html.BeginForm())
             {
+                <!-- Html.TextBoxFor(x => x.attribute) generates a new TextBox in HTML, takes the input, and assigns it to the attribute in Model -->
                 <p>Name: @Html.TextBoxFor(x => x.Name)</p>
                 <p>Email: @Html.TextBoxFor(x => x.Email)</p>
                 <p>Phone: @Html.TextBoxFor(x => x.Phone)</p>

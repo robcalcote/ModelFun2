@@ -18,7 +18,6 @@ namespace ModelFun2.Controllers
             ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
             ViewBag.Output = "<p>Hello</p>";
 
-
             // Returns the view that is associated with HomeController
             return View();
         }
