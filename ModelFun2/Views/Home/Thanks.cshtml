@@ -1,0 +1,19 @@
+﻿@model ModelFun2.Models.GuestResponse
+
+@{
+    ViewBag.Title = "Thanks";
+}
+
+<body>
+    <div>
+        <h1>Thank you @Model.Name</h1>
+        @if (Model.WillAttend == true)
+        {
+            <p>We look forward to seeing you</p>
+        }
+        else
+        {
+            <p>Hopefully next time you can make it</p>
+        }
+    </div>
+</body>
