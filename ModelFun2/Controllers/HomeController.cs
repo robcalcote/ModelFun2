@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ModelFun2.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,7 +10,6 @@ namespace ModelFun2.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        [HttpGet]
         public ActionResult Index()
         {
             // variable hour is the date and time right now
@@ -23,9 +23,18 @@ namespace ModelFun2.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult RsvpForm()
         {
             return View();
+        }
+
+        // Taken directly from Learning Suite
+        // This method is called when you hit the "submit" button on RsvpForm.cshtml
+        [HttpPost]
+        public ViewResult RsvpForm(GuestResponse guestResponse)
+        {
+            return View("Thanks", guestResponse);
         }
     }
 }
