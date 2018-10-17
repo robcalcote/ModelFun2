@@ -31,10 +31,19 @@ namespace ModelFun2.Controllers
 
         // Taken directly from Learning Suite
         // This method is called when you hit the "submit" button on RsvpForm.cshtml
+        // This method will return "Thanks" if the model is valid, if not, it returns an error message view
         [HttpPost]
         public ViewResult RsvpForm(GuestResponse guestResponse)
         {
-            return View("Thanks", guestResponse);
+            if (ModelState.IsValid)
+            {
+                return View("Thanks", guestResponse);
+            }
+            else
+            {
+                //Validation Error
+                return View();
+            }
         }
     }
 }
