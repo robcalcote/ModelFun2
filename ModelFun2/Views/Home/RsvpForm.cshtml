@@ -21,7 +21,7 @@
     <div class="jumbotron">
         <div class="container">
             <!-- Html.BeginForm() function generates all the HTML we need for a HTML form (everything inside {   }) -->
-            @using (Html.BeginForm())
+            @using (Html.BeginForm("RsvpForm", "Home", FormMethod.Post))
             {
                 <!-- Html.TextBoxFor(x => x.attribute) generates a new TextBox in HTML, takes the input, and assigns it to the attribute in Model -->
                 <p>Name: @Html.TextBoxFor(x => x.Name)</p>
